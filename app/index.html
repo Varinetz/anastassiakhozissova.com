@@ -1,0 +1,41 @@
+<!DOCTYPE html class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DEMO</title>
+	<!-- build:css css/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:css css/main.css -->
+	<link rel="stylesheet" type="text/css" href="s/main.css">  
+	<!-- endbuild -->
+</head>
+<body>
+<section class="horPage">	
+	<script id="mainPage" type="text/x-handlebars-template">​
+	<h1 class="mainPage-title"><span>{{title}}</span></h1>
+		<ul class="mainPage-menu">
+		  {{#each items}}
+		    <li class="mainPage-menu__item">
+		    	<div class="mainPage-menu__item__bg" style="background-image:url({{img}})"></div>
+		    	<div class="mainPage-menu__item__title"><span>{{title}}</span></div>
+		    </li>
+		  {{/each}}
+		</ul>
+	</script>
+</body>
+</section>
+<!-- build:js js/vendor.js -->
+<script src="js/modernizr.js"></script>
+<!-- bower:js -->
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/handlebars/handlebars.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js js/main.js -->
+<script src="js/z.js"></script>
+<!-- endbuild -->
+</html>
