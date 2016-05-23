@@ -17,6 +17,11 @@ body {
   width: 100%;
   overflow: hidden;
 }
+.bgfix {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  overflow: hidden !important;
+}
 .round-n-shadow {
   border-radius: 50%;
   box-shadow: 0 0 5px #000;
@@ -64,10 +69,10 @@ body {
 }
 .mainPage-menu__item {
   position: absolute;
-  float: left;
   list-style-type: none;
   overflow: hidden;
   cursor: pointer;
+  -webkit-transform: scale(1);
   border-radius: 50%;
   box-shadow: 0 0 5px #000;
 }

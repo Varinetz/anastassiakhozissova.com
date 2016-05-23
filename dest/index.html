@@ -7,13 +7,12 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<section class="horPage">	
+<section class="horPage">
 	<script id="mainPage" type="text/x-handlebars-template">​
 	<h1 class="mainPage-title"><span>{{title}}</span></h1>
 		<ul class="mainPage-menu">
 		  {{#each items}}
 		    <li class="mainPage-menu__item">
-		    	<div class="mainPage-menu__item__bg" style="background-image:url({{img}})"></div>
 		    	<div class="mainPage-menu__item__title"><span>{{title}}</span></div>
 		    </li>
 		  {{/each}}

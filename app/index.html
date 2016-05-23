@@ -18,8 +18,7 @@
 	<h1 class="mainPage-title"><span>{{title}}</span></h1>
 		<ul class="mainPage-menu">
 		  {{#each items}}
-		    <li class="mainPage-menu__item">
-		    	<div class="mainPage-menu__item__bg" style="background-image:url({{img}})"></div>
+		    <li class="mainPage-menu__item" style="background-image:url({{img}})">
 		    	<div class="mainPage-menu__item__title"><span>{{title}}</span></div>
 		    </li>
 		  {{/each}}
@@ -36,6 +35,7 @@
 <!-- endbuild -->
 
 <!-- build:js js/main.js -->
+<script src="http://www.stevenheld.com/HoverClickTriggerCircle/js/jquery.circlemouse.js"></script>
 <script src="js/z.js"></script>
 <!-- endbuild -->
 </html>

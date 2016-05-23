@@ -14,7 +14,13 @@
 
 		function setSlidesSize() {
 			$('.mainPage-menu__item, .mainPage-title').each(function(){
-				$(this).height(slideSize).width(slideSize).css('top', slideSize / 6 * -1);
+				var topOffset = slideSize / 6;
+				$(this).height(slideSize).width(slideSize).css({
+					'top': topOffset * -1,
+					'background-size' : 'auto ' + wH + 'px',
+					'background-position' :  'left ' + topOffset + 'px',
+
+				});
 			});
 			$('.mainPage-menu__item__title').each(function(){
 				$(this).height(slideSize).width(slideSize);
@@ -32,28 +38,28 @@
 			title: 'Anastassia Khozissova',
 			items: [
 				{
-				title: 'Collider',
-				img: '/img/1.jpg',
+				title: "About",
+				img: 'img/1.jpg',
 				link: '#'
 				},
 				{
-				title: 'Champion',
-				img: '/img/2.jpg',
+				title: 'Portfolio',
+				img: 'img/2.jpg',
 				link: '#'
 				},
 				{
 				title: 'Covers',
-				img: '/img/3.jpg',
-				link: '#'
-				},
-				{
-				title: 'Rolls Royce',
-				img: '/img/4.jpg',
+				img: 'img/3.jpg',
 				link: '#'
 				},
 				{
 				title: 'Charity',
-				img: '/img/5.jpg',
+				img: 'img/4.jpg',
+				link: '#'
+				},
+				{
+				title: 'Projects',
+				img: 'img/5.jpg',
 				link: '#'
 				}
 			]
@@ -73,14 +79,31 @@
 			bodyFS();
 		});
 
-		$('.mainPage-menu__item').mouseover(function() {
+		$('.mainPage-menu__item').mouseenter(function() {
 			$(this).addClass('hover');
 			$(this).nextAll().addClass('MPSlideToRight');
 			$(this).prevAll().addClass('MPSlideToLeft');
-		}).mouseout(function() {
+		}).mouseleave(function() {
 			$('.hover').removeClass('hover');
 			$('.MPSlideToLeft').removeClass('MPSlideToLeft');
 			$('.MPSlideToRight').removeClass('MPSlideToRight');
 		});
+		// $('.mainPage-menu__item').circlemouse({
+		// 	onMouseEnter	: function( el ) {
+			
+		// 		el.addClass('hover');
+			
+		// 	},
+		// 	onMouseLeave	: function( el ) {
+				
+		// 		el.removeClass('hover');
+				
+		// 	},
+		// 	onClick			: function( el ) {
+				
+		// 		alert('clicked');
+				
+		// 	}
+		// });
 	});
 })(jQuery);
