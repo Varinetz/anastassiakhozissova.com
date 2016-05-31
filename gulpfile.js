@@ -81,7 +81,8 @@ gulp.task('less', function () {
   return gulp.src('app/s/main.less')
     .pipe(less())
     .pipe(gulpif('*.css', prefix('last 2 versions', 'ie9', '>1%' )))
-    .pipe(gulp.dest('app/s'));
+    .pipe(gulp.dest('app/s'))
+    .pipe(browserSync.stream());
 });
 
 

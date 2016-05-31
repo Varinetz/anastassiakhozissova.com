@@ -6,6 +6,7 @@
 	<!-- build:css css/vendor.css -->
 	<!-- bower:css -->
 	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
 	<!-- endbower -->
 	<!-- endbuild -->
 	<!-- build:css css/main.css -->
@@ -14,7 +15,16 @@
 </head>
 <body>
 <section class="horPage">	
-	<script id="mainPage" type="text/x-handlebars-template">​
+	<script id="socBtnsItems" type="text/x-handlebars-template">​
+		<ul class="mainPage-socBtns">
+		  {{#each items}}
+		    <li class="mainPage-socBtns__item" style="color:{{bg}}">
+		    	<i class="mainPage-socBtns__item__icon fa {{icon}}" title="{{popup}}"></i>
+		    </li>
+		  {{/each}}
+		</ul>
+	</script>	
+	<script id="mainpageItems" type="text/x-handlebars-template">​
 	<h1 class="mainPage-title"><span>{{title}}</span></h1>
 		<ul class="mainPage-menu">
 		  {{#each items}}

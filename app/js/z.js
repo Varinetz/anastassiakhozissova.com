@@ -34,14 +34,14 @@
 		}
 
 		//handlebars
-		var theData = {
+		var mainpageItems = {
 			title: 'Anastassia Khozissova',
 			items: [
-				{
-				title: "About",
-				img: 'img/1.jpg',
-				link: '#'
-				},
+				// {
+				// title: "About",
+				// img: 'img/1.jpg',
+				// link: '#'
+				// },
 				{
 				title: 'Portfolio',
 				img: 'img/2.jpg',
@@ -64,9 +64,39 @@
 				}
 			]
 		};
-		var theTemplateScript = $("#mainPage").html();  
+		var theTemplateScript = $("#mainpageItems").html();  
 		 var theTemplate = Handlebars.compile(theTemplateScript);  
-		$('.horPage').append(theTemplate(theData));
+		$('.horPage').append(theTemplate(mainpageItems));
+
+		var socBtnsItems = {
+			items: [
+				{
+				popup: 'YouTube',
+				icon: 'fa-youtube',
+				bg: '#ff5c5c'
+				},
+				{
+				popup: 'twitter',
+				icon: 'fa-twitter',
+				bg: '#6dadde'
+				},
+				{
+				popup: 'facebook',
+				icon: 'fa-facebook-official',
+				bg: '#4e70ba'
+				},
+				{
+				popup: 'instagram',
+				icon: 'fa-instagram',
+				bg: '#f23d61'
+				},
+			]
+		};
+		var socBtnsTemplateScript = $("#socBtnsItems").html();  
+		 var socBtnsTemplate = Handlebars.compile(socBtnsTemplateScript);  
+		$('.horPage').prepend(socBtnsTemplate(socBtnsItems));
+
+		//socBtnsItems
 
 		//handlebars END
 		setSizeVars();
