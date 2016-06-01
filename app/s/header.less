@@ -1,0 +1,141 @@
+.header {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	background: #fff;
+	left: 95%;
+	z-index: 2;
+	cursor: default;
+	overflow: hidden;
+	.round-n-shadow;
+	.transition(transform);
+
+	&:hover {
+		transform: translate(-40%);
+	}
+
+	&__container {
+		padding: 20px 0;
+		position: absolute;
+		width: 30%;
+		height: 70%;
+		right: 55%;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+
+	.siteName {	
+		margin: auto;
+		padding: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		display: inline;
+		width: 100%;
+		transform: rotateZ(-90deg);
+		-webkit-transform: rotateZ(-90deg);
+		text-align: center;
+		font-size: 1em;
+		text-align: center;
+		.noselect;	
+
+		span {
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			top: 2.5%;
+		}
+	}
+
+	&__socBtns {
+		@iconSize: 2.25em;
+		position: relative;
+		//margin: 1em;
+		padding: 0;
+		text-align: center;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			height: 1px;
+			width: 100%;
+			background: #ccc;
+			z-index: 0;
+		}
+
+		&__item {
+			margin: @iconSize / 15;
+			list-style: none;
+			display: inline-block;
+			width: @iconSize;
+			height: @iconSize;
+			line-height: @iconSize;
+			cursor: pointer;
+			position: relative;
+			background: #fff;
+			box-shadow: 0 0 5px rgba(0,0,0,.4);
+			z-index: 1;
+			.circled;
+			.transition(box-shadow);
+
+			&:hover {
+				box-shadow: 0 0 7px rgba(0,0,0,.5);
+			}
+			
+			&__icon {
+				font-size: @iconSize / 2;
+				line-height: inherit;
+				display: block;
+				background-color: #fff;
+
+				// &::after {
+				// 	content: '';
+				// 	width: 0;
+				// 	height: 0;
+				// 	.absolute-center;
+				// 	.transition(width height);
+				// }
+
+				// &:hover {
+				// 	color: #fff;
+				// 	&::after {
+				// 		width: 100%;
+				// 		height: 100%;
+				// 	}
+				// }
+
+				// &.fa-youtube {
+				// 	&::after {
+				// 		bacground: #ff5c5c;
+				// 	}
+				// }	
+				// &.fa-twitter {
+				// 	&::after {
+				// 		bacground: #6dadde;
+				// 	}
+				// }	
+				// &.fa-facebook-official {
+				// 	&::after {
+				// 		bacground: #4e70ba;
+				// 	}
+				// }
+				// &.fa-instagram {
+				// 	&::after {
+				// 		bacground: #f23d61;
+				// 	}
+				// }
+
+			}
+		}
+	}
+}
+
+.mainMenu {
+	background: #ccc;
+	height: 350px;
+}

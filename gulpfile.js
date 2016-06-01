@@ -104,9 +104,9 @@ gulp.task('copy', function() {
 
 gulp.task('watch', function() {
     gulp.watch('bower.json', ['bower']);
-    gulp.watch('app/s/*.less', ['less']).on('change', browserSync.reload);
+    gulp.watch('app/s/*.less', ['less']);
     gulp.watch('app/img/*', ['image']);
-    gulp.watch(['app/js/*.js', 'app/s/*.less', 'app/*.html', 'app/img/*']).on('change', browserSync.reload);
+    gulp.watch(['app/js/*.js', 'app/*.html', 'app/img/*']).on('change', browserSync.reload);
 })
 
 // default

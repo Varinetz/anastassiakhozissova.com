@@ -8,6 +8,11 @@
 		    border-radius: @size;
 }
 
+.circled {
+	border-radius: 50%;
+	overflow: hidden;
+}
+
 .box-shadow (@string: 0 0 3px rgba(0,0,0,.4)) {
 	-webkit-box-shadow: @string;
 	-moz-box-shadow:    @string;
@@ -27,7 +32,15 @@
 	right: @right;
 	bottom: @bottom;
 }
-
+.absolute-center {	
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	overflow: hidden;
+}
 .ellipsis {
 	white-space: nowrap;
 	text-overflow: ellipsis;

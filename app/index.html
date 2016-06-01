@@ -14,28 +14,53 @@
 	<!-- endbuild -->
 </head>
 <body>
-<section class="horPage">	
-	<script id="socBtnsItems" type="text/x-handlebars-template">​
-		<ul class="mainPage-socBtns">
-		  {{#each items}}
-		    <li class="mainPage-socBtns__item" style="color:{{bg}}">
-		    	<i class="mainPage-socBtns__item__icon fa {{icon}}" title="{{popup}}"></i>
-		    </li>
-		  {{/each}}
-		</ul>
-	</script>	
-	<script id="mainpageItems" type="text/x-handlebars-template">​
-	<h1 class="mainPage-title"><span>{{title}}</span></h1>
-		<ul class="mainPage-menu">
-		  {{#each items}}
-		    <li class="mainPage-menu__item" style="background-image:url({{img}})">
-		    	<div class="mainPage-menu__item__title"><span>{{title}}</span></div>
-		    </li>
-		  {{/each}}
-		</ul>
-	</script>
+	<section class="horPage">	
+		<script id="headerTemplate" type="text/x-handlebars-template">​
+			<section id="header" class="header">
+				<h1 class="siteName"><span>{{title}}</span></h1>
+				<div class="header__container">
+					<nav id="mainMenu" class="mainMenu">
+						<ul class="mainMenu__holder">
+							{{#each menuItems}}
+							    <li class="mainMenu__item">
+									{{title}}
+							    </li>
+							  {{/each}}
+						  </ul>
+					</nav>
+					<div class="socBnts">
+						<ul class="header__socBtns">
+						  {{#each socItems}}
+						    <li class="header__socBtns__item" style="color:#555">
+						    	<i class="header__socBtns__item__icon fa {{icon}}" title="{{popup}}"></i>
+						    </li>
+						  {{/each}}
+						</ul>
+					</div>
+				</div>
+			</section>
+		</script>	
+		<!--<script id="socBtnsItems" type="text/x-handlebars-template">​
+			<ul class="mainPage-socBtns">
+			  {{#each items}}
+			    <li class="mainPage-socBtns__item" style="color:#555">
+			    	<i class="mainPage-socBtns__item__icon fa {{icon}}" title="{{popup}}"></i>
+			    </li>
+			  {{/each}}
+			</ul>
+		</script>	-->
+		<script id="mainpageItems" type="text/x-handlebars-template">​
+			<ul class="mainPage-menu">
+			  {{#each items}}
+			    <li class="mainPage-menu__item" style="background-image:url({{img}})">
+			    	<div class="mainPage-menu__item__title"><span>{{title}}</span></div>
+			    </li>
+			  {{/each}}
+			</ul>
+		</script>
+
+	</section>
 </body>
-</section>
 <!-- build:js js/vendor.js -->
 <script src="js/modernizr.js"></script>
 <!-- bower:js -->
@@ -47,5 +72,6 @@
 <!-- build:js js/main.js -->
 <script src="http://www.stevenheld.com/HoverClickTriggerCircle/js/jquery.circlemouse.js"></script>
 <script src="js/z.js"></script>
+<script src="js/handlebarsTmpl.js"></script>
 <!-- endbuild -->
 </html>
